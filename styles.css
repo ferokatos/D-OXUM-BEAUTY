@@ -1,0 +1,168 @@
+/* Garante que html e body ocupem toda a altura da viewport */
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+/* Aplica a imagem de fundo no html para cobrir toda a tela fixa */
+html {
+  background: url("Fundo.png") no-repeat center center fixed;
+  background-size: cover;
+}
+
+/* Remove background do body para evitar conflito */
+body {
+  font-family: "Roboto", sans-serif;
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  /* background-image removido para imagem ficar no html */
+}
+
+/* Animação fade-in suave para o h1 */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Ajuste do título principal */
+h1 {
+  font-size: 350%;
+  font-family: "Cormorant Garamond", serif;
+  color: #796f6f !important;
+  text-align: center;
+  margin: 0;
+  font-weight: 100;
+  animation: fadeIn 1.5s ease forwards;
+}
+
+/* Animação fade-in mais lenta para o subtítulo, com delay */
+h1 .subtitle {
+  display: block;
+  font-size: 30%;
+  margin-top: 5px;
+  color: #978371 !important;
+  text-align: center;
+  opacity: 0;
+  animation: fadeIn 2.5s ease forwards;
+  animation-delay: 0.5s;
+}
+
+/* Header styling: logo and navigation */
+header {
+  align-items: center;
+  justify-content: space-between;
+  background-color: #fff6ef;
+  padding: 15px 30px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  position: relative;
+  top: 0;
+  z-index: 1000;
+}
+
+/* Section styling - uniformiza largura e alinhamento */
+section {
+  max-width: 900px;
+  width: 90%;
+  margin: 40px auto;
+  padding: 20px;
+  background-color: #fff6ef;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(163, 118, 86, 0.1);
+  box-sizing: border-box;
+  text-align: left;
+}
+
+/* Os títulos h2 alinhados à esquerda */
+h2 {
+  text-align: left;
+  color: #978371;
+  margin-bottom: 15px;
+}
+p {
+  font-family: "Roboto", sans-serif;
+  
+}
+
+.Italic {
+  font-style: italic;
+}
+/* Ajuste para contato */
+#contact {
+  padding: 20px;
+  box-sizing: border-box;
+  max-width: 900px;
+  width: 90%;
+  margin: 40px auto;
+  background-color: #fff6ef;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(163, 118, 86, 0.1);
+  text-align: left;
+}
+
+#contact h2 {
+  margin-bottom: 15px;
+  color: #978371;
+  font-weight: 700;
+}
+
+.contact-links {
+  display: flex;
+  justify-content: flex-start;
+  gap: 30px;
+  flex-wrap: wrap;
+  margin-top: 8px;
+  padding: 0;
+}
+
+/* Transição suave e efeito de elevação nos links ao passar o mouse */
+#contact a {
+  font-size: 1.1rem;
+  color: #000000;
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.3s ease, transform 0.3s ease;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+#contact a:hover {
+  color: #a37656;
+  transform: translateY(-3px);
+}
+
+#contact a i {
+  font-size: 1.2rem;
+  color: #000000;
+  transition: color 0.3s ease;
+}
+
+#contact a:hover i {
+  color: #a37656;
+}
+
+/* Responsive adjustments */
+@media(max-width: 700px) {
+  header {
+    flex-direction: column;
+    gap: 10px;
+  }
+}
+
+/* Ajustes para a seção Services */
+section#services {
+  text-align: left;
+}
+
+section#services ul {
+  padding-left: 20px;
+  list-style-position: outside;
+  text-align: left;
+  margin: 0;
+}
+
+h3 {
+  font-size: 100%;
+}
